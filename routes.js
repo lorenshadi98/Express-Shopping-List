@@ -2,11 +2,11 @@ const express = require('express');
 const router = new express.Router();
 const items = require('./fakeDb');
 
-router.get('/', function (req, res) {
+router.get('', function (req, res) {
   return res.json(items);
 });
 
-router.post('/', function (req, res) {
+router.post('', function (req, res) {
   const name = req.body.name;
   const price = req.body.price;
   items.push({ name: name, price: price });
